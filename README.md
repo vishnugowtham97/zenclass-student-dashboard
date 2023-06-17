@@ -54,7 +54,7 @@ Contribution
 Contributions are welcome! If you have any suggestions, bug fixes, or new features to add, please submit a pull request.
 
 # License
-This project is licensed under the MIT License.
+This project is licensed under the ISC License.
 
 Feel free to customize this README file based on your specific project requirements.
 
