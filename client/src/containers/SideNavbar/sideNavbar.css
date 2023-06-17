@@ -1,0 +1,63 @@
+.navBarContainer,
+.collapsedNavbar {
+  box-shadow: 3px 3px 3px 3px rgb(0 0 0 / 10%);
+  height: 100%;
+  background: whitesmoke;
+  color: blue;
+  padding-top: 30px;
+  overflow: scroll;
+}
+
+.navBarContainer {
+  z-index: 1;
+}
+
+.collapsedNavbar {
+  width: 80px;
+}
+
+.navBarItems {
+  display: grid;
+  gap: 24px;
+  padding: 20px;
+  padding-top: 0;
+}
+
+.coursesText,
+.certificateText,
+.dashboardWrapper,
+.capstoneText,
+.webcodeText,
+.signOut {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  gap: 16px;
+  cursor: pointer;
+}
+
+.coursesText img,
+.certificateText img,
+.dashboardWrapper img,
+.capstoneText img,
+.webcodeText img,
+.sideNavbar .signOut img {
+  width: 35px;
+  height: 35px;
+}
+
+.sideNavbar .signOut {
+  padding: 20px;
+  cursor: pointer;
+}
+
+.navBarItems h3 {
+  margin: 0;
+}
+
+.sideNavbar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 80vh;
+}
