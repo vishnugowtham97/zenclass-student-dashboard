@@ -1,0 +1,17 @@
+.style {
+  cursor: pointer;
+  color: blue;
+  border: 1px solid black;
+}
+
+.style1 {
+  overflow: auto;
+  max-height: 800px;
+  width: 50%;
+  margin: auto;
+  border: 1px solid black;
+}
+
+.table-heading {
+  background-color: gray;
+}

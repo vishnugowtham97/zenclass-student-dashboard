@@ -21,6 +21,8 @@
   gap: 24px;
   padding: 20px;
   padding-top: 0;
+  overflow: auto;
+  overflow-x: hidden;
 }
 
 .coursesText,
@@ -29,6 +31,8 @@
 .capstoneText,
 .webcodeText,
 .requirementText,
+.applicationText,
+.syllabusText,
 .signOut {
   display: flex;
   align-items: center;
@@ -43,6 +47,8 @@
 .capstoneText img,
 .webcodeText img,
 .requirementText img,
+.applicationText img,
+.syllabusText img,
 .sideNavbar .signOut img {
   width: 35px;
   height: 35px;

@@ -4,6 +4,8 @@ import "./requirement.css";
 export function Requirement() {
   return (
     <div className="requirement-body">
+      <h1 className="heading">Requirements</h1>
+      <hr />
       <div className="requirement-container">
         <div className="search-box">
           search

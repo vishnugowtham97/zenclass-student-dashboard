@@ -110,6 +110,29 @@ export function SideNavbar({ onClick, type }) {
             />
             <div>Requirement</div>
           </div>
+          <div
+            className="applicationText"
+            onClick={() => onClick("/application")}
+          >
+            <img
+              src={
+                type === "application"
+                  ? "../Assets/application.png"
+                  : "./Assets/application.png"
+              }
+            />
+            <div>Application</div>
+          </div>
+          <div className="syllabusText" onClick={() => onClick("/syllabus")}>
+            <img
+              src={
+                type === "syllabus"
+                  ? "../Assets/syllabus.png"
+                  : "./Assets/syllabus.png"
+              }
+            />
+            <div>Syllabus</div>
+          </div>
         </div>
         <div className="signOut" onClick={() => onClick("/login", "signOut")}>
           <img
@@ -119,7 +142,7 @@ export function SideNavbar({ onClick, type }) {
                 : "./Assets/signout.png"
             }
           />
-          <div className="signout">Sign Out</div>
+          <div className="signout">Logout</div>
         </div>
       </div>
     </div>

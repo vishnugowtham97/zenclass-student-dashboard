@@ -18,8 +18,8 @@ export function TopNavBar() {
       </div>
       <div className="userProfile">
         <div className="userWrapper">
-          <div className="profileImage">{userName.charAt(0)}</div>
           <div className="name">{userName}</div>
+          <div className="profileImage">{userName.charAt(0)}</div>
         </div>
       </div>
     </div>
