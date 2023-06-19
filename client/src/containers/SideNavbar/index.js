@@ -97,6 +97,19 @@ export function SideNavbar({ onClick, type }) {
             />
             <div>Capstone</div>
           </div>
+          <div
+            className="requirementText"
+            onClick={() => onClick("/requirement")}
+          >
+            <img
+              src={
+                type === "requirement"
+                  ? "../Assets/requirement.png"
+                  : "./Assets/requirement.png"
+              }
+            />
+            <div>Requirement</div>
+          </div>
         </div>
         <div className="signOut" onClick={() => onClick("/login", "signOut")}>
           <img

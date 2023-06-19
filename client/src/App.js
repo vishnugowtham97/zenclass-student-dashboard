@@ -20,6 +20,7 @@ import { Capstone } from "./containers/Capstone";
 import { TopNavBar } from "./containers/TopNavBar";
 import { ForgotPassword } from "./containers/ForgotPassword";
 import { ResetPassword } from "./containers/ResetPassword";
+import { Requirement } from "./containers/Requirement";
 
 function App() {
   const location = useLocation();
@@ -66,6 +67,7 @@ function App() {
           <Route path="/certificates" element={<Certificates />} />
           <Route path="/webcode" element={<Webcode />} />
           <Route path="/capstone" element={<Capstone />} />
+          <Route path="/requirement" element={<Requirement />} />
           <Route path="/forgotpassword" element={<ForgotPassword />} />
           <Route
             path={`reset-password/:id/:token`}
