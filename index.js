@@ -2,40 +2,13 @@ import express from "express";
 import { Db, MongoClient } from "mongodb";
 import dotenv from "dotenv";
 import { coursesRouter } from "./routes/courses.js";
-import cors from "cors";
 import { userRouter } from "./routes/users.js";
 import { classesRouter } from "./routes/classes.js";
 import { tasksRouter } from "./routes/tasks.js";
-import { classesData, courseData, taskData } from "./data.js";
 import { countRouter } from "./routes/count.js";
 
 const app = express();
 dotenv.config();
-// app.use(cors());
-// app.use(
-//         cors({
-//           origin: "*",
-//           credentials: true
-//         })
-//       );
-
-// app.use(
-//   cors({
-//     origin: [
-//       "http://localhost:3000",
-//       "https://radiant-daifuku-2ee562.netlify.app",
-//     ],
-//     credentials: true,
-//   })
-// );
-// app.use((req, res, next) => {
-//         res.setHeader("Access-Control-Allow-Origin", "*");
-//         res.header(
-//           "Access-Control-Allow-Headers",
-//           "Origin, X-Requested-With, Content-Type, Accept"
-//         );
-//         next();
-//       });
 
 app.use(function (req, res, next) {
   res.header(
@@ -69,7 +42,7 @@ async function createConnection() {
 export const client = await createConnection();
 
 app.get("/", async function (request, response) {
-  response.send("Hi, Welcome to Zenclass ...!!!");
+  response.send("Hi, Welcome to Zenclass Student Dashboard ...!!!");
 });
 
 app.use("/courses", coursesRouter);
@@ -77,11 +50,5 @@ app.use("/users", userRouter);
 app.use("/classes", classesRouter);
 app.use("/tasks", tasksRouter);
 app.use("/count", countRouter);
-
-// await client
-//   .db("zenStudentDashboard")
-//   .collection("courses")
-//   .insertMany(courseData);
-// await client.db("zenStudentDashboard").collection("tasks").insertMany(taskData);
 
 app.listen(port, () => console.log(`server has started in port ${port}`));
