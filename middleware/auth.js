@@ -2,8 +2,6 @@ import jwt from "jsonwebtoken";
 
 export const auth = async (request, response, next) => {
   try {
-    // console.log(req.header);
-    // console.log(req.header());
     const token = await request.header("x-auth-token");
     console.log(token);
     jwt.verify(token, process.env.secretkey);

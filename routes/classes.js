@@ -7,7 +7,6 @@ const router = express.Router();
 
 router.get("/getClassById/:id", auth, async (req, res) => {
   const { id } = req.params;
-  // console.log(id, typeof(id),ObjectId(+id));
   const classData = await await client
     .db("zenStudentDashboard")
     .collection("classes")

@@ -24,12 +24,10 @@ router.post("/signup", async function (req, res) {
   if (userFromDB) {
     res.status(400).send({ message: "Email already exists", emailError: true });
   } else if (password.length < 8) {
-    res
-      .status(400)
-      .send({
-        message: "Password should be minimum of 8 characters",
-        passwordError: true,
-      });
+    res.status(400).send({
+      message: "Password should be minimum of 8 characters",
+      passwordError: true,
+    });
   } else {
     const hashedPassword = await genHashedPassword(password);
     const result = await createUSer({
@@ -67,7 +65,6 @@ router.post("/login", async function (req, res) {
       name: userFromDB.userName,
       id: userFromDB._id,
     });
-    // console.log(res.name,req.body[0]);
   }
 });
 
@@ -80,7 +77,6 @@ router.post("/forgotpassword", async function (req, res) {
   if (!userFromDB) {
     res.status(401).send({ message: "Email does not exists" });
   } else {
-    //  const secret = process.env.secretKey + userFromDB.password;
     const secret = process.env.secretKey;
     const payload = {
       email: userFromDB.email,
@@ -151,7 +147,6 @@ function mailer(email, link) {
     to: email,
     subject: "Reset Password - Learn Infinity (Zen Student Portal)",
     text: "Hi User",
-    // html: "<div><h4>Hi User,<h4></br><p>please click the link below for password reset</p></br><a href={link}/> </div>"
     html: `please click the link to reset your password - ${link}`,
   };
 

@@ -46,18 +46,13 @@ router.put("/updateStatus/:courseId", auth, async function (req, res) {
       .collection("users")
       .find({ userName: userName })
       .toArray();
-    // console.log("userArray", userArray);
     let coursesUndertaken = userArray[0].coursesUndertaken;
-    // console.log("coursesUndertaken", coursesUndertaken);
     const isCourseExists = coursesUndertaken.find(
       (value) => value.courseName === courseName
     );
-    // console.log("isCourseExists", isCourseExists);
     if (!isCourseExists) {
       userArray[0].coursesUndertaken = [...coursesUndertaken, courseData];
-      // console.log("before",userArray[0].coursesUndertaken);
     } else {
-      // console.log(userArray[0].tasksCompleted, taskDetails);
       const arrayExcludingPrevSol = userArray[0].coursesUndertaken.filter(
         (value) => value.courseName !== courseName
       );
@@ -86,7 +81,6 @@ router.get(
   async function (req, res) {
     const { userId, courseId } = req.params;
     console.log(userId, courseId);
-    // let isCourseCompleted = false;
 
     let userDetails = await client
       .db("zenStudentDashboard")
@@ -157,15 +151,11 @@ router.get("/userCourses/:userId", auth, async function (req, res) {
     .toArray();
   const userCourseData = userCoursesInfo[0].coursesUndertaken;
 
-  // console.log(coursesList);
-  // console.log(userCourseData);
-
   const userCourseStatus = coursesList.map((value) => {
     let percentage;
     const matchedCourse = userCourseData.filter(
       (value1) => value1.courseName === value
     );
-    // console.log(value, matchedCourse);
     percentage = matchedCourse.length
       ? matchedCourse[0].percentageCompletion
       : 0;

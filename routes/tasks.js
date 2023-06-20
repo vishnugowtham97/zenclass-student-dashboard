@@ -38,7 +38,6 @@ router.put("/postTaskSolutions/:taskDetails", auth, async function (req, res) {
     if (!isTaskExists) {
       userArray[0].tasksCompleted = [...tasksCompleted, solution];
     } else {
-      // console.log(userArray[0].tasksCompleted, taskDetails);
       console.log(userArray[0].tasksCompleted);
       const arrayExcludingPrevSol = userArray[0].tasksCompleted.filter(
         (value) => value.taskName !== taskDetails
