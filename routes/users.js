@@ -137,13 +137,13 @@ function mailer(email, link) {
   var transporter = nodemailer.createTransport({
     service: "outlook",
     auth: {
-      user: "coderatwork@outlook.com",
+      user: "delldell2421997@outlook.com",
       pass: process.env.password,
     },
   });
   console.log("My pass: ", process.env.password);
   var mailOptions = {
-    from: "coderatwork@outlook.com",
+    from: "delldell2421997@outlook.com",
     to: email,
     subject: "Reset Password - Learn Infinity (Zen Student Portal)",
     text: "Hi User",
