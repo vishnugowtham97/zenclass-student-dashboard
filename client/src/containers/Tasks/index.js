@@ -151,10 +151,10 @@ export function TaskInfo({ taskData }) {
         <h2>Task Description</h2>
         {userTask.length ? <div className="taskStatus">Submitted</div> : ""}
       </div>
-      <div className="taskDescription">{taskData.taskInfo}</div>
+      <div className="taskDescription">Submit the proper URL</div>
       <form className="taskSubmissionForm" onSubmit={(e) => onSubmit(e)}>
         <div className={userTask.length ? "readOnlyInput" : ""}>
-          <label htmlFor="frontEndSourceURL">Front End Source Code URL:</label>{" "}
+          <label htmlFor="frontEndSourceURL">Front End Source Code URL:</label>
           <br />
           <input
             id="frontEndSourceURL"

@@ -4,7 +4,7 @@
 }
 
 .coursePieChart {
-  width: 350px !important;
+  width: max-content !important;
   margin-top: 20px;
   background: rgb(236, 234, 234);
   padding: 20px 40px;
